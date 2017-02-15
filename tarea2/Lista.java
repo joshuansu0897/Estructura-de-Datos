@@ -81,6 +81,31 @@ class Lista{
       }
     }
 
+    public static void acomodar_acendente_insercion(){
+      Nodo indice, segundo;
+      for (indice = primero.getEnlace(); indice != null ; indice = indice.getEnlace()) {
+        segundo = primero;
+        while(segundo != null && segundo != indice.getEnlace()){
+          if (segundo.getValue() > indice.getValue()) {
+            int num1 = indice.getValue();
+            int num2 = segundo.getValue();
+            segundo.setValue(num1);
+            segundo = segundo.getEnlace();
+            while(segundo != null){
+              segundo.setValue(num2);
+              segundo = segundo.getEnlace();
+              if (segundo != null) {
+                num2 = segundo.getValue();
+              }
+            }
+          }
+          if (segundo != null) {
+            segundo = segundo.getEnlace();
+          }
+        }
+      }
+    }
+
     public Lista agregar_como_ultimo(int valor){
       Nodo indice, ultimo;
       indice = primero;
