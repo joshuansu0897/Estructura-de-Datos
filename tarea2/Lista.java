@@ -85,17 +85,17 @@ class Lista{
       Nodo indice, segundo;
       for (indice = primero.getEnlace(); indice != null ; indice = indice.getEnlace()) {
         segundo = primero;
+        int n1 = indice.getValue();
         while(segundo != null && segundo != indice.getEnlace()){
-          if (segundo.getValue() > indice.getValue()) {
-            int num1 = indice.getValue();
-            int num2 = segundo.getValue();
-            segundo.setValue(num1);
+          int n2 = segundo.getValue();
+          if (n1 < n2) {
+            segundo.setValue(n1);
             segundo = segundo.getEnlace();
-            while(segundo != null){
-              segundo.setValue(num2);
+            while(segundo != null && segundo != indice.getEnlace()){
+              segundo.setValue(n2);
               segundo = segundo.getEnlace();
               if (segundo != null) {
-                num2 = segundo.getValue();
+                n2 = segundo.getValue();
               }
             }
           }
