@@ -53,7 +53,7 @@ class Lista{
       }
     }
 
-    public static void acomodar_acedente_seleccion(){
+    public void acomodar_acedente_seleccion(){
       Nodo indice, segundo;
       for (indice = primero; indice != null ; indice = indice.getEnlace()) {
         for (segundo = indice ; segundo != null ; segundo = segundo.getEnlace()) {
@@ -67,7 +67,7 @@ class Lista{
       }
   	}
 
-    public static void acomodar_decendente_seleccion(){
+    public void acomodar_decendente_seleccion(){
       Nodo indice, segundo;
       for (indice = primero; indice != null ; indice = indice.getEnlace()) {
         for (segundo = indice ; segundo != null ; segundo = segundo.getEnlace()) {
@@ -81,25 +81,17 @@ class Lista{
       }
     }
 
-    public static void acomodar_acendente_insercion(){
+    public void acomodar_acendente_insercion(){
       Nodo indice, segundo;
-      for (indice = primero.getEnlace(); indice != null ; indice = indice.getEnlace()) {
+      for (indice = primero; indice != null ; indice = indice.getEnlace()) {
         segundo = primero;
         int n1 = indice.getValue();
         while(segundo != null && segundo != indice.getEnlace()){
           int n2 = segundo.getValue();
           if (n1 < n2) {
-            segundo.setValue(n1);
-            segundo = segundo.getEnlace();
-            while(segundo != null && segundo != indice.getEnlace()){
-              segundo.setValue(n2);
-              segundo = segundo.getEnlace();
-              if (segundo != null) {
-                n2 = segundo.getValue();
-              }
-            }
+            agregar_en_medio(n2,n1);
           }
-          if (segundo != null) {
+          if (segundo != null ) {
             segundo = segundo.getEnlace();
           }
         }

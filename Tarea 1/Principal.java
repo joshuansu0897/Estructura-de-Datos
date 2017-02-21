@@ -38,7 +38,7 @@ class Principal{
 		int arreglo[] = new int[leer.nextInt()];
 		System.out.println();
 		llenar(arreglo);
-		return arreglo;	
+		return arreglo;
 	}
 
 	public static int[] llenar(int[] arr){
@@ -62,7 +62,7 @@ class Principal{
 		Insercion inserccion = new Insercion();
 		Seleccion seleccion = new Seleccion();
 		while(true){
-			System.out.println("Que quieres hacer? \n1.- Burbuja acendente \n2.- Burbuja decendente \n3.- Seleccion acendente \n4.- Seleccion decendente \n5.- Inserccion acendente \n6.- Inserccion decendente \n7.- Desordenar Arreglo \n8.- Salir");	
+			System.out.println("Que quieres hacer? \n1.- Burbuja acendente \n2.- Burbuja decendente \n3.- Seleccion acendente \n4.- Seleccion decendente \n5.- Inserccion acendente \n6.- Inserccion decendente \n7.- Desordenar Arreglo \n8.- Salir");
 			System.out.println();
 			Scanner leer = new Scanner(System.in);
 			hacer = leer.nextInt();
@@ -84,7 +84,7 @@ class Principal{
 			}else if (hacer == 2) {
 				imprimir(burbuja.decendente(arr));
 			}else if (hacer == 1) {
-				imprimir(burbuja.acendente(arr));				
+				imprimir(burbuja.acendente(arr));
 			}else{
 				System.out.println("Dame un numero valido porfavor");
 			}

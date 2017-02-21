@@ -12,6 +12,9 @@ class Principal{
     int tam = sc.nextInt();
 
 
+    //for (int i = 0; i < tam ; i++ ) {
+    //  lista.agregar_cabeza_lista((int)(Math.random() * 1000));
+    //}
     Azar(tam);
     System.out.println("Antes");
     lista.mostrar_lista();
