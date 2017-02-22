@@ -10,6 +10,12 @@ public class pila{
     listapila = new int [tama];
   }
 
+  pila(int num){
+    cima = -1;
+    listapila = new int [num];
+    System.out.println("Creaste una pila de tama;o: "+num);
+  }
+
   void push(int valor){
     listapila[++cima] = valor;
   }
@@ -20,6 +26,14 @@ public class pila{
     }else{
       System.out.println("esta vacia no puedes borrar");
       return 0;
+    }
+  }
+
+  boolean full(){
+    if (cima == listapila.length-1) {
+      return true;
+    }else{
+      return false;
     }
   }
 
