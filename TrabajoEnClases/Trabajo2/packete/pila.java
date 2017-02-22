@@ -17,7 +17,11 @@ public class pila{
   }
 
   void push(int valor){
-    listapila[++cima] = valor;
+    if (!full()) {
+      listapila[++cima] = valor;
+    }else{
+      System.out.println("Pila llena morro, no puedes meter mas valores");
+    }
   }
 
   int pop(){
@@ -29,12 +33,12 @@ public class pila{
     }
   }
 
+  int getTama(){
+    return listapila.length;
+  }
+
   boolean full(){
-    if (cima == listapila.length-1) {
-      return true;
-    }else{
-      return false;
-    }
+    return cima == listapila.length-1;
   }
 
   boolean empty(){
@@ -48,7 +52,12 @@ public class pila{
   }
 
   int cima_value_pila(){
-    return listapila[cima];
+    if (!empty()) {
+      return listapila[cima];
+    }else{
+      System.out.println("no tienes datos que mostrar");
+      return 0;
+    }
   }
 
 

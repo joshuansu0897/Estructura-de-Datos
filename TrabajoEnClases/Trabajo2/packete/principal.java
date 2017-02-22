@@ -5,26 +5,18 @@ class principal{
     pila p = new pila();
     pila p2 = new pila(3);
 
-    p.push(30);
-    p.push(20);
-    p.push(25);
+    System.out.println("llenando pila 2");
+    for (int i=0 ; i< p2.getTama() ; i++ ) {
+      p2.push(i * 2);
+    }
 
-    p2.push(30);
-    p2.push(20);
-    p2.push(25);
+    System.out.println("imprimiendo pila 2");
+    for (int i=0 ; i< p2.getTama() ; i++ ) {
+      System.out.println("borrando "+p2.pop());
+    }
+    System.out.println("");
 
-    System.out.println("Pila "+String.valueOf(p2)+" esta llena?: "+p2.full());
-
-    System.out.println("cima "+p.cima_value_pila());
-    System.out.println("borrando "+p.pop());
-    System.out.println();
-
-    System.out.println("cima "+p.cima_value_pila());
-    System.out.println("borrando "+p.pop());
-    System.out.println();
-
-    System.out.println("cima "+p.cima_value_pila());
-    System.out.println("borrando "+p.pop());
-
+    p2.pop();
+    p2.cima_value_pila();
   }
 }
