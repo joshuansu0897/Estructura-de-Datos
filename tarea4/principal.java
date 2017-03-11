@@ -9,7 +9,7 @@ class principal{
     pila.push(10);
     pila.push(11);
     pila.push(34);
-    pila.push(100); 
+    pila.push(100);
 
     pila.print_pila();
 
@@ -24,6 +24,6 @@ class principal{
     pila.print_pila();
     pila.pop();
     pila.print_pila();
-
+    pila.pop();
   }
 }

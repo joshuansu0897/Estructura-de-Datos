@@ -30,8 +30,7 @@ public class listapila {
         indice.setEnlace(null);
       }catch(Exception ex){
         System.out.println("Se borro: "+indice.getValue());
-        indice.setValue(0);
-        indice = null;
+        primero = null;
       }
     }else{
       System.out.println("Esta vacia la pila, no puedes borrar");
@@ -41,9 +40,8 @@ public class listapila {
   public int tama(){
     Nodo n;
     n = primero;
-    int contador =0;
+    int contador = 0;
     while (n != null) {
-      System.out.println("Dato: "+n.getValue()+" Enlace: "+ n.getEnlace());
       n = n.getEnlace();
       contador++;
     }
