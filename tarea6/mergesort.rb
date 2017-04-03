@@ -1,10 +1,9 @@
 def mergesort(array)
     if array.count <= 1
-        # Array of length 1 or less is always sorted
         return array
     end
 
-    # tenemos que "Dividir y Acomodar" 
+    # tenemos que "Dividir y Acomodar"
 
     # 1. Divide
     mid = array.count / 2
