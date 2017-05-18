@@ -63,8 +63,8 @@ public class GrafoMatriz{
 	  return matAd[va][vb] == 1;
   }
 
-  public boolean adyacenteNum(int va, int vb)throws Exception{
-    if (va < 0 || vb < 0) throw new Exception ("Vértice no existe");
+  public boolean adyacenteNum(int va, int vb){
+    if (va < 0 || vb < 0)System.out.println("Vértice no existe");
     return matAd[va][vb] == 1;
   }
 }
